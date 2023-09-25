@@ -45,23 +45,13 @@ const {
           {
             title && (
               <h1
-                class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+                class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading gradient-text"
                 set:html={title}
               />
             )
           }
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          <p class="mb-4">
-            I'm a passionate software developer and technical writer.<br />
-            My heart lies in the world of open source technologies, where I find joy in both creating software and sharing my knowledge through the written word.
-          </p>
-          <p class="mb-4">
-            Since 2018, I've been actively contributing to various open source projects, including Node.js and <Button variant="link" class='underline' href='https://www.fastify.dev/' target="_blank">Fastify</Button>.<br />
-            While maintaining the Fastify ecosystem as a core contributor, I'm also focusing on my side projects, which include the <Button variant="link" class='underline' href='https://backend.cafe/' target="_blank">backend.cafe</Button> blog, book writing, and a open source projects built with anyone who has an idea and writes me a message.
-          </p>
-          <p>Currently, I work as a Senior Software Developer at
-            <Button variant="link" class='underline' href='https://www.nearform.com/' target="_blank">NearForm</Button>.
-          </p>
+          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-500 font-bold" set:html={subtitle} />}
+          {content && <Fragment set:html={content} />}
           {
             actions && (
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
